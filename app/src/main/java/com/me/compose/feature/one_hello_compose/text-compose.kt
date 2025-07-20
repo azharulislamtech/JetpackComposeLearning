@@ -1,10 +1,8 @@
 package com.me.compose.feature.one_hello_compose
 
-import android.view.Surface
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,7 +17,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.ArrowForward
-import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -38,7 +35,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import java.nio.file.WatchEvent
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.foundation.rememberScrollState
@@ -50,6 +46,7 @@ fun CreateText(name: String = "World") {
     val scrollState = rememberScrollState()
     Column(
         modifier = Modifier
+            .fillMaxSize()
             .verticalScroll(scrollState)
             .padding(30.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -218,72 +215,103 @@ fun CreateText(name: String = "World") {
                 modifier = Modifier.padding(top = 16.dp)
             )
         }
-    }
 
-    /*todo:💡 Accessibility & Semantics
-       Test readability with contrast on dark/light backgrounds
-       Use ContentDescription where needed for screen readers*/
-    Text("Accessibility & Semantics")
 
-    // Accessibility demonstration
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        // Good contrast on dark background
-        Box(
+        /*todo:💡 Accessibility & Semantics
+           Test readability with contrast on dark/light backgrounds
+           Use ContentDescription where needed for screen readers*/
+        Text("Accessibility & Semantics")
+
+        // Accessibility demonstration
+        Column(
             modifier = Modifier
-                .background(Color.Black, RoundedCornerShape(8.dp))
-                .padding(12.dp)
-                .fillMaxWidth(0.9f)
+                .fillMaxWidth()
+                .padding(vertical = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                "High Contrast: Light text on dark background",
-                color = Color.White,
-                style = MaterialTheme.typography.bodyLarge,
+            // Good contrast on dark background
+            Box(
                 modifier = Modifier
-                    .semantics {
-                        contentDescription = "This text is easy to read on a dark background"
-                    }
-            )
-        }
+                    .background(Color.Black, RoundedCornerShape(8.dp))
+                    .padding(12.dp)
+                    .fillMaxWidth(0.9f)
+            ) {
+                Text(
+                    "High Contrast: Light text on dark background",
+                    color = Color.White,
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier
+                        .semantics {
+                            contentDescription = "This text is easy to read on a dark background"
+                        }
+                )
+            }
 
-        // Good contrast on light background
-        Box(
+            // Good contrast on light background
+            Box(
+                modifier = Modifier
+                    .background(Color.White, RoundedCornerShape(8.dp))
+                    .padding(12.dp)
+                    .fillMaxWidth(0.9f)
+            ) {
+                Text(
+                    "High Contrast: Dark text on light background",
+                    color = Color.Black,
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier
+                        .semantics {
+                            contentDescription = "This text is easy to read on a light background"
+                        }
+                )
+            }
+
+            // Icon with content description for screen readers
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(top = 20.dp, bottom = 30.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                    contentDescription = "Move forward",
+                    tint = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.size(20.dp)
+                )
+                Text(
+                    text = "Accessible icon & text",
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier.padding(start = 8.dp)
+                )
+            }
+        }
+        // TODO: 🧪 Previews & Testing
+        //  Add @Preview annotations with different text styles
+        //  Create multiple text samples in preview to compare typography
+        Text("Previews & Testing", style = MaterialTheme.typography.headlineMedium)
+
+        Column(
             modifier = Modifier
-                .background(Color.White, RoundedCornerShape(8.dp))
-                .padding(12.dp)
-                .fillMaxWidth(0.9f)
+                .padding(16.dp)
+                .fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Text(
-                "High Contrast: Dark text on light background",
-                color = Color.Black,
-                style = MaterialTheme.typography.bodyLarge,
-                modifier = Modifier
-                    .semantics {
-                        contentDescription = "This text is easy to read on a light background"
-                    }
-            )
+            Text("Display Large", style = MaterialTheme.typography.displayLarge)
+            Text("Headline Medium", style = MaterialTheme.typography.headlineMedium)
+            Text("Title Small", style = MaterialTheme.typography.titleSmall)
+            Text("Body Large", style = MaterialTheme.typography.bodyLarge)
+            Text("Body Medium", style = MaterialTheme.typography.bodyMedium)
+            Text("Label Small", style = MaterialTheme.typography.labelSmall)
+            // Add more if desired
         }
-
-        // Icon with content description for screen readers
         Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(top = 20.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                contentDescription = "Move forward",
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(20.dp)
-            )
-            Text(
-                text = "Accessible icon & text",
-                style = MaterialTheme.typography.bodyLarge,
-                modifier = Modifier.padding(start = 8.dp)
-            )
+            Text("Large", style = MaterialTheme.typography.displayLarge)
+            Text("Medium", style = MaterialTheme.typography.bodyMedium)
+            Text("Small", style = MaterialTheme.typography.labelSmall)
         }
     }
+
 }
