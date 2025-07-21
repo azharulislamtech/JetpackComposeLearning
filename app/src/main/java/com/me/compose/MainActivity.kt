@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.me.compose.feature.one_hello_compose.CreateImage
+import com.me.compose.feature.one_hello_compose.CreateSpacer
 import com.me.compose.ui.theme.JetpackComposeLearningTheme
 
 class MainActivity : ComponentActivity() {
@@ -15,7 +16,8 @@ class MainActivity : ComponentActivity() {
             JetpackComposeLearningTheme {
 //                CreateText("Azharul Islam")
 //                CreateButton()
-                CreateImage()
+//                CreateImage()
+                CreateSpacer()
             }
         }
     }

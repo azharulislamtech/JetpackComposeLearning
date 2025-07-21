@@ -46,7 +46,7 @@ import com.google.accompanist.placeholder.material.placeholder
 import com.google.accompanist.placeholder.material.shimmer
 import com.me.compose.R
 import com.me.compose.ui.components.image.UserProfileImage
-import com.me.compose.utils.UserProfileImage
+
 
 @Preview
 @Composable
