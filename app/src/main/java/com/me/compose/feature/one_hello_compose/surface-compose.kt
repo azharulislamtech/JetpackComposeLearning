@@ -56,7 +56,7 @@ fun CreateSurface() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            "\uD83D\uDCE6 Basic Display", style = MaterialTheme.typography.headlineSmall.copy(
+            "\uD83D\uDCE6 Surface Basic Display", style = MaterialTheme.typography.headlineSmall.copy(
                 textDecoration = TextDecoration.Underline
             )
         )
@@ -600,8 +600,6 @@ fun CreateSurface() {
                     // Handle follow action
                 }
             )
-
-
 
             SurfaceSection(
                 title = {
