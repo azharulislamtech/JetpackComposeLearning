@@ -4,13 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.me.compose.feature.one_hello_compose.CreateImage
+import com.me.compose.feature.one_hello_compose.CreateModifier
+import com.me.compose.feature.one_hello_compose.CreateSpacer
+import com.me.compose.feature.one_hello_compose.CreateSurface
 import com.me.compose.ui.theme.JetpackComposeLearningTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +16,14 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeLearningTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+//                CreateText("Azharul Islam")
+//                CreateButton()
+//                CreateImage()
+//                CreateSpacer()
+//                CreateSurface()
+                CreateModifier()
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    JetpackComposeLearningTheme {
-        Greeting("Android")
-    }
-}
