@@ -59,5 +59,5 @@ dependencies {
     implementation(libs.coil.compose) // or latest
     implementation("com.google.accompanist:accompanist-placeholder-material:0.36.0")
     implementation("org.burnoutcrew.composereorderable:reorderable:0.9.6")
-
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
 }
