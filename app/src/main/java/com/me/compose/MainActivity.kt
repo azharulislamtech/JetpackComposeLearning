@@ -10,6 +10,7 @@ import com.me.compose.feature.one_hello_compose.CreateSpacer
 import com.me.compose.feature.one_hello_compose.CreateSurface
 import com.me.compose.feature.two_layout_lab.CreateBox
 import com.me.compose.feature.two_layout_lab.CreateColumn
+import com.me.compose.feature.two_layout_lab.CreateMixedLayout
 import com.me.compose.feature.two_layout_lab.CreateRow
 import com.me.compose.ui.theme.JetpackComposeLearningTheme
 
@@ -27,7 +28,8 @@ class MainActivity : ComponentActivity() {
 //                CreateModifier()
 //                CreateColumn()
 //                CreateRow()
-                CreateBox()
+//                CreateBox()
+                CreateMixedLayout()
             }
         }
     }
