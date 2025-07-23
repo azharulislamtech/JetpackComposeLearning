@@ -1,17 +1,14 @@
 package com.me.compose
 
+import CustomerListScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.me.compose.feature.one_hello_compose.CreateImage
-import com.me.compose.feature.one_hello_compose.CreateModifier
-import com.me.compose.feature.one_hello_compose.CreateSpacer
-import com.me.compose.feature.one_hello_compose.CreateSurface
-import com.me.compose.feature.two_layout_lab.CreateBox
-import com.me.compose.feature.two_layout_lab.CreateColumn
-import com.me.compose.feature.two_layout_lab.CreateMixedLayout
-import com.me.compose.feature.two_layout_lab.CreateRow
+import com.me.compose.feature.two_layout_lab.CreateLazyColumnRow
+import com.me.compose.feature.two_layout_lab.presentation.DynamicDataScreen
+import com.me.compose.feature.two_layout_lab.presentation.component.TodoApp
+import com.me.compose.feature.two_layout_lab.presentation.view.ProductScreen
 import com.me.compose.ui.theme.JetpackComposeLearningTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,6 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeLearningTheme {
+
 //                CreateText("Azharul Islam")
 //                CreateButton()
 //                CreateImage()
@@ -29,7 +27,12 @@ class MainActivity : ComponentActivity() {
 //                CreateColumn()
 //                CreateRow()
 //                CreateBox()
-                CreateMixedLayout()
+//                CreateMixedLayout()
+//                CreateLazyColumnRow()
+                DynamicDataScreen()
+//                TodoApp()
+//                CustomerListScreen()
+
             }
         }
     }
