@@ -21,6 +21,7 @@ import com.me.compose.feature.two_layout_lab.data.model.CustomerProfile
 @Composable
 fun CustomerCard(
     user: CustomerProfile,
+
     onClick: () -> Unit,
     onDelete: () -> Unit
 ) {
