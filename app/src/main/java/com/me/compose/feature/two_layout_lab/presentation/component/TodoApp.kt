@@ -115,7 +115,7 @@ fun TodoApp(viewModel: TodoViewModel = viewModel()) {
                             onDelete = { viewModel.deleteTodo(it) },
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .animateItemPlacement()
+                              //  .animateItemPlacement()
                         )
                     }
                 }

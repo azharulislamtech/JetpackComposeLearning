@@ -57,8 +57,19 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.coil.compose) // or latest
-    implementation("com.google.accompanist:accompanist-placeholder-material:0.36.0")
-    implementation("org.burnoutcrew.composereorderable:reorderable:0.9.6")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
-    implementation("androidx.compose.material:material-icons-extended:1.6.1")
+    implementation(libs.accompanist.placeholder.material)
+    implementation(libs.reorderable)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.material.icons.extended)
+    // Koin for Android
+    implementation(libs.koin.android)
+// Koin with Compose
+    implementation(libs.koin.androidx.compose)
+
+    // Jetpack Compose Navigation
+    implementation(libs.androidx.navigation.compose)
+    // Material 3 for Jetpack Compose
+    implementation(libs.material3)
+// Accompanist Navigation Animation (optional)
+    implementation("com.google.accompanist:accompanist-navigation-animation:0.36.0")
 }
