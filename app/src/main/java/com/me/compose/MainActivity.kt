@@ -10,6 +10,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.core.content.pm.ShortcutInfoCompat
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import com.me.compose.feature.five_StyledAndPolished.BasicThemApp.BasicThemApp
+import com.me.compose.feature.five_StyledAndPolished.TopBarBottomNavNested.ui.ThemeApp
+
+
 import com.me.compose.feature.four_multiScreenNavigator.presentation.navigationDeepLink.ui.NavDeepLinkScreen
 import com.me.compose.feature.four_multiScreenNavigator.presentation.navigationWithArguments.ui.NavArgumentLayout
 import com.me.compose.feature.four_multiScreenNavigator.presentation.nestedNavgraph.ui.NestedNavGraph
@@ -57,7 +61,9 @@ class MainActivity : ComponentActivity() {
 //                NavigationBasics()
 //                NavArgumentLayout()
 //                NavDeepLinkScreen()
-                NestedNavGraph()
+//                NestedNavGraph()
+//                ThemeApp()
+                BasicThemApp()
             }
         }
     }

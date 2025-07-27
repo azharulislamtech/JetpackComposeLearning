@@ -1,0 +1,4 @@
+package com.me.compose.feature.five_StyledAndPolished.DynamicThemeApp.ui.screen.home
+
+class HomeViewModel {
+}
