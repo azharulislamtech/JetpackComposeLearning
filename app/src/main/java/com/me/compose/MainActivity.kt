@@ -25,6 +25,10 @@ import com.me.compose.feature.four_multiScreenNavigator.presentation.nestedNavgr
 import com.me.compose.feature.four_multiScreenNavigator.presentation.scaffoldSetup.ui.components.ScaffoldLayout
 import com.me.compose.feature.four_multiScreenNavigator.presentation.screenNavigationBasics.navigation.AppNavGraph
 import com.me.compose.feature.four_multiScreenNavigator.presentation.screenNavigationBasics.ui.NavigationBasics
+import com.me.compose.feature.six_interactions.presentation.animatedui.AnimatedUI
+import com.me.compose.feature.six_interactions.presentation.carddialogsnackbar.CarddialogsnackbarApp
+import com.me.compose.feature.six_interactions.presentation.motiondemo.MotionDemo
+import com.me.compose.feature.six_interactions.presentation.sheetdrawerapp.Sheetdrawerapp
 import com.me.compose.feature.three_UserInputPlayground.presentation.stateAndInput.ui.TextFieldApp
 import com.me.compose.feature.three_UserInputPlayground.presentation.stateAndInput.ui.TextFieldScreen
 import com.me.compose.feature.three_UserInputPlayground.presentation.stateManagement.ui.InputScreen
@@ -73,7 +77,11 @@ class MainActivity : ComponentActivity() {
 //                TestTheme()
 //                CustomShapeStyle()
 //                DarkModeAppTest()
-                ThemePlaygroundRoute()
+//                ThemePlaygroundRoute()
+//                CarddialogsnackbarApp()
+//                Sheetdrawerapp()
+//                AnimatedUI()
+                MotionDemo()
             }
         }
     }
