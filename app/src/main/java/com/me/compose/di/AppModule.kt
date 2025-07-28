@@ -21,5 +21,6 @@ val appModule = module {
     viewModel { ProfileViewModel() }
     viewModel { AuthViewModel() }
     viewModel {  com.me.compose.feature.five_StyledAndPolished.TopBarBottomNavNested.viewmodel.HomeViewModel() }
+    viewModel {   com.me.compose.feature.five_StyledAndPolished.DynamicThemeApp.ui.screen.home.HomeViewModel() }
     viewModel { com.me.compose.feature.five_StyledAndPolished.TopBarBottomNavNested.viewmodel.ProfileViewModel() }
 }

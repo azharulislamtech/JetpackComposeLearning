@@ -11,6 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.core.content.pm.ShortcutInfoCompat
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.me.compose.feature.five_StyledAndPolished.BasicThemApp.BasicThemApp
+import com.me.compose.feature.five_StyledAndPolished.CustomShapeStyle.CustomShapeStyle
+import com.me.compose.feature.five_StyledAndPolished.DarkModeApp.DarkModeAppTest
+import com.me.compose.feature.five_StyledAndPolished.DynamicThemeApp.ui.screen.home.HomeScreen
+import com.me.compose.feature.five_StyledAndPolished.TestTheme.TestTheme
+import com.me.compose.feature.five_StyledAndPolished.ThemePlayground.ThemePlaygroundRoute
 import com.me.compose.feature.five_StyledAndPolished.TopBarBottomNavNested.ui.ThemeApp
 
 
@@ -63,7 +68,12 @@ class MainActivity : ComponentActivity() {
 //                NavDeepLinkScreen()
 //                NestedNavGraph()
 //                ThemeApp()
-                BasicThemApp()
+//                BasicThemApp()
+//                HomeScreen()
+//                TestTheme()
+//                CustomShapeStyle()
+//                DarkModeAppTest()
+                ThemePlaygroundRoute()
             }
         }
     }
