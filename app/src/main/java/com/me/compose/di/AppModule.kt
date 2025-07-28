@@ -1,6 +1,8 @@
 package com.me.compose.di
 
 
+import com.me.compose.feature.five_StyledAndPolished.TopBarBottomNavNested.viewmodel.AuthViewModel
+
 import com.me.compose.feature.four_multiScreenNavigator.presentation.navigationDeepLink.viewmodel.NavDeepLinkViewModel
 import com.me.compose.feature.four_multiScreenNavigator.presentation.navigationWithArguments.viewmodel.NavigationArgViewModel
 import com.me.compose.feature.four_multiScreenNavigator.presentation.nestedNavgraph.viewmodel.HomeViewModel
@@ -17,4 +19,8 @@ val appModule = module {
     viewModel { NavDeepLinkViewModel() }
     viewModel { HomeViewModel() }
     viewModel { ProfileViewModel() }
+    viewModel { AuthViewModel() }
+    viewModel {  com.me.compose.feature.five_StyledAndPolished.TopBarBottomNavNested.viewmodel.HomeViewModel() }
+    viewModel {   com.me.compose.feature.five_StyledAndPolished.DynamicThemeApp.ui.screen.home.HomeViewModel() }
+    viewModel { com.me.compose.feature.five_StyledAndPolished.TopBarBottomNavNested.viewmodel.ProfileViewModel() }
 }
