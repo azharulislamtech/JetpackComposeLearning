@@ -10,6 +10,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.core.content.pm.ShortcutInfoCompat
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import com.me.compose.feature.eight_reusables.ComponentModularSample.ComponentModularSample
+import com.me.compose.feature.eight_reusables.DesignSystemSample.DesignSystemSample
+import com.me.compose.feature.eight_reusables.ModifierExtensionsSample.ModifierExtensionsSample
+import com.me.compose.feature.eight_reusables.ReusableComponentsSample.ReusableComponentsSample
 import com.me.compose.feature.five_StyledAndPolished.BasicThemApp.BasicThemApp
 import com.me.compose.feature.five_StyledAndPolished.CustomShapeStyle.CustomShapeStyle
 import com.me.compose.feature.five_StyledAndPolished.DarkModeApp.DarkModeAppTest
@@ -81,7 +85,11 @@ class MainActivity : ComponentActivity() {
 //                CarddialogsnackbarApp()
 //                Sheetdrawerapp()
 //                AnimatedUI()
-                MotionDemo()
+//                MotionDemo()
+//                ReusableComponentsSample()
+//                ModifierExtensionsSample()
+//                ComponentModularSample()
+                DesignSystemSample()
             }
         }
     }
