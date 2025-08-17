@@ -9,6 +9,7 @@ import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.core.content.pm.ShortcutInfoCompat
+import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.me.compose.feature.eight_reusables.ComponentModularSample.ComponentModularSample
 import com.me.compose.feature.eight_reusables.DesignSystemSample.DesignSystemSample
@@ -75,7 +76,7 @@ class MainActivity : ComponentActivity() {
 //                NavArgumentLayout()
 //                NavDeepLinkScreen()
 //                NestedNavGraph()
-//                ThemeApp()
+                ThemeApp()
 //                BasicThemApp()
 //                HomeScreen()
 //                TestTheme()
@@ -89,7 +90,8 @@ class MainActivity : ComponentActivity() {
 //                ReusableComponentsSample()
 //                ModifierExtensionsSample()
 //                ComponentModularSample()
-                DesignSystemSample()
+//                DesignSystemSample()
+
             }
         }
     }

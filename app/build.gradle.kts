@@ -72,4 +72,7 @@ dependencies {
     implementation(libs.material3)
 // Accompanist Navigation Animation (optional)
     implementation("com.google.accompanist:accompanist-navigation-animation:0.36.0")
+
+    implementation("androidx.navigation3:navigation3-runtime:1.0.0-alpha05")
+    implementation("androidx.navigation3:navigation3-ui:1.0.0-alpha05")
 }
